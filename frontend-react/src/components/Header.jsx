@@ -21,11 +21,15 @@ export const Header = () => {
             <Link className='navbar-brand text-light' to='/'>Stock Prediction Portal</Link>
             <div>
                 {isLoggedIn ? (
-                <button class="btn btn-outline-info" onClick={handleLogout}>Logout</button>
+                <>
+                    <Button text ='Dashboard' class="btn-info" url = '/dashboard'/>
+                    &nbsp;&nbsp;
+                    <button className="btn btn-outline-info" onClick={handleLogout}>Logout</button>
+                </>
                 ):(
                 <>
                     <Button text ='Login' class="btn-outline-info" url = '/login'/>
-                    &nbsp;  
+                    &nbsp;&nbsp; 
                     <Button text ='Register' class="btn-info" url = '/register'/>
                 </>
                 )}
